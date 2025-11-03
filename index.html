@@ -1,0 +1,228 @@
+/* 全域設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+    scroll-behavior: smooth;
+}
+
+/* 導覽列 */
+header {
+    background-color: rgba(20, 20, 20, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #00aaff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00aaff;
+}
+
+/* Hero 區塊 */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #0d0d0d 0%, #1a1a40 100%);
+    padding: 2rem;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.hero-content .highlight {
+    color: #00aaff;
+}
+
+.hero-content p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #cccccc;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #00aaff;
+    color: #00aaff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00aaff;
+    color: #0d0d0d;
+}
+
+/* 區塊通用樣式 */
+.section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #00aaff;
+    margin-bottom: 2rem;
+}
+
+/* 關於我 */
+#about p {
+    text-align: center;
+    line-height: 1.8;
+    color: #dddddd;
+}
+
+/* 技能 */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.skills-list li {
+    list-style: none;
+    background: #1a1a1a;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #222;
+    color: #00aaff;
+    transition: background 0.3s;
+}
+
+.skills-list li:hover {
+    background: #00aaff;
+    color: #0d0d0d;
+}
+
+/* 作品集 */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    display: block;
+}
+
+.project-card h3 {
+    color: #00aaff;
+    margin: 1rem;
+}
+
+.project-card p {
+    color: #cccccc;
+    margin: 0 1rem 1.5rem;
+}
+
+/* 聯絡表單 */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.contact input,
+.contact textarea {
+    padding: 0.8rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background: #121212;
+    color: #f0f0f0;
+}
+
+.contact button {
+    padding: 0.8rem;
+    background-color: #00aaff;
+    color: #0d0d0d;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.contact button:hover {
+    opacity: 0.85;
+}
+
+/* 頁尾 */
+footer {
+    background-color: #0a0a0a;
+    text-align: center;
+    padding: 1.5rem;
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 1px solid #111;
+}
+
+/* RWD 響應式設計 */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
